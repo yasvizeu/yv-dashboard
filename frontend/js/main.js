@@ -1,4 +1,7 @@
-const API = 'http://localhost:3000/api';
+const API =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:3000/api'
+    : 'https://yv-dashboard-production.up.railway.app';
 
 // ── AUTH GUARD ──
 const token = localStorage.getItem('yv_token');
